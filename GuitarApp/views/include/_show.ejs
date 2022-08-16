@@ -1,0 +1,21 @@
+<!-- EJS template for showing users in table form with buttons -->
+
+<%  for (var i=0; i < users.length; i++){ %>
+<tr>
+    <td><%= i + 1 %></td>
+    <td><%= users[i].name %></td>
+    <td><%= users[i].email %></td>
+    <td><%= users[i].phone_number %></td>
+    <td><%= users[i].board_ID %></td>
+    <td><%= users[i].time_out %></td>
+    <td><%= users[i].time_in %></td>
+    <td>
+        <a href="/update-user?id=<%= users[i]._id %>" class="btn border-shadow update">
+            <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+        </a>
+        <a class="btn border-shadow delete" data-id=<%= users[i]._id %>>
+            <span class="text-gradient"><i class="fas fa-times"></i></span>
+        </a>
+    </td>
+</tr>
+<% } %>

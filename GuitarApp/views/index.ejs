@@ -1,0 +1,43 @@
+<!-- EJS template for the main page -->
+
+<!-- inlcude header -->
+    <%- include('include/_header') %>
+<!-- /inlcude header -->
+
+ <!-- Main Site -->
+ <main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <a href="/add-user" class="border-shadow">
+                <span class="text-gradient">New User <i class="fa-solid fa-user"></i></span>
+            </a>
+        </div>
+
+        <!--  form handling  -->
+        <form action="/" method="POST">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone Number</th>
+                        <th>Board ID</th>
+                        <th>Time out</th>
+                        <th>Time in</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody >
+                    <%- include('include/_show') %>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</main>
+<!-- Main Site -->
+
+<!-- inlcude footer -->
+    <%- include('include/_footer') %>
+<!-- /inlcude footer -->
+    
